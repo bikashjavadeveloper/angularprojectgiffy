@@ -7,13 +7,16 @@ import { LoginComponent } from './login/login.component';
 import { CustomMaterialModule } from './core/material.module'
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { RegistrationapiService } from './registrationapi.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     CustomMaterialModule
 
   ],
-  providers: [],
+  providers: [RegistrationapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
