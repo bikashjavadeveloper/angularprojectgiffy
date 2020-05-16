@@ -1,31 +1,31 @@
-<p>registration works!</p>
+<p *ngIf="deviceXs">registration works!</p>
 
-<!-- <mat-toolbar color="primary">
-<mat-toolbar-row>
-<span>My First App</span>
-    <span class="example-fill-remaining-space"></span>
-    <span class="align-center"></span>
-    <span class="example-spacer"></span>
-    <button mat-button>About</button>
-    <button mat-button>Contact</button>
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-  <mat-icon>more_vert</mat-icon>
+<mat-toolbar>
+
+<mat-toolbar-row fxLayoutAlign="space-between center">
+
+<div>
+<button mat-button>
+<mat-icon>home</mat-icon>
+<span>Ghibila Giffy App</span>
 </button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>dialpad</mat-icon>
-    <span>Redial</span>
-  </button>
-  <button mat-menu-item disabled>
-    <mat-icon>voicemail</mat-icon>
-    <span>Check voicemail</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>notifications_off</mat-icon>
-    <span>Disable alerts</span>
-  </button>
-</mat-menu>
- </mat-toolbar-row>primary -->
+<button mat-button>Home</button>
+<button mat-button>Contact Us</button>
+<button mat-button>About us</button>
+</div>
 
 
- 
+<div>
+<button mat-icon-button>
+<mat-icon *ngIf="deviceXs">more_vert</mat-icon>
+<span *ngIf="!deviceXs">Menu</span>
+</button>
+</div>
+</mat-toolbar-row>
+
+<mat-toolbar-row *ngIf="deviceXs">
+  <span>Second Row</span>
+</mat-toolbar-row>
+
+</mat-toolbar>
+

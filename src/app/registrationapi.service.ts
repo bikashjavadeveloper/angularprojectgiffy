@@ -15,6 +15,8 @@ export class RegistrationapiService {
   }
 public accountManagerRegistration(userId: number, email: string,username: string,password: string){
 
+  //('http:/lcoalhost:8080/');
+
 }
 
 }

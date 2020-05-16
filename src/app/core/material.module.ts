@@ -12,6 +12,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 @NgModule({
   imports: [
@@ -26,7 +29,10 @@ import { HttpClientModule } from '@angular/common/http';
   MatIconModule,
   MatProgressSpinnerModule,
   FormsModule,
-  HttpClientModule
+  HttpClientModule,
+  BrowserAnimationsModule,
+  MatFormFieldModule,
+  
   ],
   exports: [
   CommonModule,

@@ -9,6 +9,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { RegistrationapiService } from './registrationapi.service';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { RegistrationapiService } from './registrationapi.service';
     BrowserAnimationsModule,
     CustomMaterialModule,
     FormsModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    FlexLayoutModule
 
   ],
   providers: [RegistrationapiService],
