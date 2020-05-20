@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { RegistrationapiService } from './registrationapi.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -25,9 +26,15 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     CustomMaterialModule,
     FormsModule,
     CustomMaterialModule,
-    FlexLayoutModule
-
+    FlexLayoutModule,
+    RouterModule.forRoot([
+      {path: '' , redirectTo: '/home' , pathMatch: 'full' },
+      {path: 'home' , component : HomeComponent },
+      {path: 'login' , component : LoginComponent },
+      {path: 'registration' , component : RegistrationComponent },
+      ])
   ],
+
   providers: [RegistrationapiService],
   bootstrap: [AppComponent]
 })

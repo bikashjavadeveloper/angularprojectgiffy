@@ -11,10 +11,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import {RouterModule} from '@angular/router';
+import { HomeComponent } from '../home/home.component';
+import { RegistrationComponent } from '../registration/registration.component';
+import { LoginComponent } from '../login/login.component';
 
 @NgModule({
   imports: [
@@ -33,6 +35,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   BrowserAnimationsModule,
   MatFormFieldModule,
   
+
   ],
   exports: [
   CommonModule,
@@ -44,7 +47,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
    MatTableModule,
    MatMenuModule,
    MatIconModule,
-   MatProgressSpinnerModule
+   MatProgressSpinnerModule,
+   
+
    ],
 })
 export class CustomMaterialModule { }
