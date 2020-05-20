@@ -28,7 +28,7 @@ import {RouterModule} from '@angular/router';
     CustomMaterialModule,
     FlexLayoutModule,
     RouterModule.forRoot([
-      {path: '' , redirectTo: '/home' , pathMatch: 'full' },
+      {path: '' , redirectTo: '/login' , pathMatch: 'full' },
       {path: 'home' , component : HomeComponent },
       {path: 'login' , component : LoginComponent },
       {path: 'registration' , component : RegistrationComponent },
