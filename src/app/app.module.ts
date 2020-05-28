@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { RegistrationapiService } from './registrationapi.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {RouterModule} from '@angular/router';
+import { SecurityComponent } from './security/security.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {RouterModule} from '@angular/router';
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    SecurityComponent
   ],
   imports: [
     BrowserModule,
