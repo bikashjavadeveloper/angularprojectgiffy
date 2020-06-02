@@ -9,7 +9,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -30,10 +29,10 @@ import { LoginComponent } from '../login/login.component';
   MatMenuModule,
   MatIconModule,
   MatProgressSpinnerModule,
-  FormsModule,
   HttpClientModule,
   BrowserAnimationsModule,
   MatFormFieldModule,
+  HttpClientModule
   
 
   ],
