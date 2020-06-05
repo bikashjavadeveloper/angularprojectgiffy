@@ -34,7 +34,7 @@ import { SecurityComponent } from './security/security.component';
       {path: '' , redirectTo: '/login' , pathMatch: 'full' },
       {path: 'home' , component : HomeComponent },
       {path: 'login' , component : LoginComponent },
-      {path: 'registration' , component : RegistrationComponent },
+      {path: 'sampritahome' , component : RegistrationComponent },
       ])
   ],
 

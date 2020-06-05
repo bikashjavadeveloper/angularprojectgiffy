@@ -3,6 +3,7 @@ import {FormsModule}  from '@angular/forms';
 import { JwtClientService } from '../jwt-client.service';
 import {FormControl,FormGroup} from '@angular/forms';
 import { HttpParams } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +11,7 @@ import { HttpParams } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  
+ 
   username:string;
   password:string;
   message:any;
@@ -22,21 +22,14 @@ export class LoginComponent implements OnInit {
       username:new FormControl(''),
       password:new FormControl('')
     });
+      
 
-    authRequest : any ={
-      "userName":"bikash",
-      "password":"bikash"
-      }
-
-    
-
-  constructor(private service:JwtClientService) { }
+  constructor(private service:JwtClientService,private router:Router) { }
 
   ngOnInit(){
     }
 
   loginGiffy(){
-    console.log("login giffy"+this.authRequest);
     let requestUserName=this.login.value.username;
     let requestPassWord=this.login.value.password;
     const body = { 'userName': requestUserName, 'password': requestPassWord };
@@ -48,19 +41,16 @@ export class LoginComponent implements OnInit {
 
   public generateToken(authRequest){
     let resp=this.service.generateToken(authRequest);
-    //resp.subscribe(data=>console.log(data))
-    resp.subscribe(data=>this.welcomeGiffy(data));
+     resp.subscribe(data=>this.welcomeGiffy(data));
 
   }
   public welcomeGiffy(token){
-
     let resp=this.service.welcome(token);
     resp.subscribe(data=>this.response=data);
-
+    resp.subscribe(data=>console.log(data));
+    this.router.navigate(['sampritahome']);
   }
 
-   showValues(){
-    console.log(this.login.value.username);
-  }
+  
 
 }
