@@ -37,14 +37,12 @@ export class LoginComponent implements OnInit {
 
   loginGiffy(){
     console.log("login giffy"+this.authRequest);
-    console.log(this.login.value.username);
-    console.log(this.login.value.password);
-
-    let req=new HttpParams();
-    req=req.set("username",this.login.value.username);
-    req=req.set("password",this.login.value.password);
-    console.log(req);
-    this.generateToken(this.authRequest);
+    let requestUserName=this.login.value.username;
+    let requestPassWord=this.login.value.password;
+    const body = { 'userName': requestUserName, 'password': requestPassWord };
+     console.log("1");
+    console.log(body);
+    this.generateToken(body);
          
   }
 
