@@ -17,6 +17,7 @@ import { HomeComponent } from '../home/home.component';
 import { RegistrationComponent } from '../registration/registration.component';
 import { LoginComponent } from '../login/login.component';
 
+
 @NgModule({
   imports: [
   CommonModule,
@@ -32,9 +33,8 @@ import { LoginComponent } from '../login/login.component';
   HttpClientModule,
   BrowserAnimationsModule,
   MatFormFieldModule,
-  HttpClientModule
+  HttpClientModule,
   
-
   ],
   exports: [
   CommonModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
+import { GiffyserviceService } from '../giffyservice.service';
 
 @Component({
   selector: 'app-registration',
@@ -27,11 +28,15 @@ export class RegistrationComponent implements OnInit, OnDestroy {
         this.deviceXs = result.mqAlias === 'xs' ? true : false;
          }
     );
+
+   
   }
 
   ngOnDestroy(){
     this.mediaSub.unsubscribe();
 
   }
+
+  
 
 }

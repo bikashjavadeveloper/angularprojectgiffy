@@ -4,6 +4,7 @@ import { JwtClientService } from '../jwt-client.service';
 import {FormControl,FormGroup} from '@angular/forms';
 import { HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { GiffyserviceService } from '../giffyservice.service';
 
 @Component({
   selector: 'app-login',
@@ -27,7 +28,12 @@ export class LoginComponent implements OnInit {
   constructor(private service:JwtClientService,private router:Router) { }
 
   ngOnInit(){
-    }
+
+   
+    
+  }
+
+  
 
   loginGiffy(){
     let requestUserName=this.login.value.username;
@@ -47,7 +53,9 @@ export class LoginComponent implements OnInit {
   public welcomeGiffy(token){
     let resp=this.service.welcome(token);
     resp.subscribe(data=>this.response=data);
+    console.log(3)
     resp.subscribe(data=>console.log(data));
+    console.log(4);
     this.router.navigate(['sampritahome']);
   }
 

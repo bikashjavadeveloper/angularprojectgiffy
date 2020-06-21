@@ -10,8 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { RegistrationapiService } from './registrationapi.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {RouterModule} from '@angular/router';
-import { SecurityComponent } from './security/security.component';
-
+import { GiffyComponent } from './giffy/giffy.component';
+import {MatListModule}  from '@angular/material/list';
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { SecurityComponent } from './security/security.component';
     RegistrationComponent,
     LoginComponent,
     HomeComponent,
-    SecurityComponent
+    GiffyComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -30,7 +31,8 @@ import { SecurityComponent } from './security/security.component';
     ReactiveFormsModule,
     CustomMaterialModule,
     FlexLayoutModule,
-    RouterModule.forRoot([
+    MatListModule,
+     RouterModule.forRoot([
       {path: '' , redirectTo: '/login' , pathMatch: 'full' },
       {path: 'home' , component : HomeComponent },
       {path: 'login' , component : LoginComponent },
